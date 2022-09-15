@@ -1,0 +1,291 @@
+// Select the database to use
+use('BD_usuarios');
+
+// Insert a few documents in the continents collection
+db.datos_usuario.insertMany( [
+  {
+    "_id": {
+      "$oid": "6322b2eb50be9b044140d63a"
+    },
+    "Nombre_usuario": "ArturoCasas",
+    "Nombre_real": "Arturo Casas Ovando",
+    "Rut": "14.985.728-3",
+    "Edad": "40",
+    "Mascota_favorita": "Perro",
+    "Raza_favorita": "Golden Retriever",
+    "Email": "ArturoC2013@hotmail.com",
+    "Dirección": "Avda Las Industrias 7758,",
+    "Ciudad": "Antofagasta"
+  },
+  {
+    "_id": {
+      "$oid": "6322b4db5827ca60c4f5436e"
+    },
+    "Nombre_usuario": "CarminaGS",
+    "Nombre_real": "Carmina Garcia Segovia",
+    "Rut": "18.234.124-7",
+    "Edad": "29",
+    "Mascota_favorita": "Gato",
+    "Raza_favorita": "Persa",
+    "Email": "CarminaG2011@gmail.com",
+    "Dirección": " Calle Enrique Mac-iver, 225",
+    "Ciudad": "Santiago"
+  },
+  {
+    "_id": {
+      "$oid": "6322b647da8c05c2478ec2f5"
+    },
+    "Nombre_usuario": "JPuerta10",
+    "Nombre_real": "José Puerta Almagro",
+    "Rut": "19.242.412-K",
+    "Edad": "25",
+    "Mascota_favorita": "Loro",
+    "Raza_favorita": "Papagayos",
+    "Email": "JPuertaAlmagro1@gmail.com",
+    "Dirección": "Av. Los Libertadores 450., El Monte",
+    "Ciudad": "Santiago"
+  },
+  {
+    "_id": {
+      "$oid": "6322b747a632ebff0a82ad18"
+    },
+    "Nombre_usuario": "LeaGallart",
+    "Nombre_real": "Leandra Gallart Bueno",
+    "Rut": "21.443.984-1",
+    "Edad": "18",
+    "Mascota_favorita": "Hamster",
+    "Raza_favorita": "Chino",
+    "Email": "Leagallart19@gmail.com",
+    "Dirección": "Avda Pedro Montt 162",
+    "Ciudad": "Puerto Montt"
+  },
+  {
+    "_id": {
+      "$oid": "6322b8e67df3892c5dd38502"
+    },
+    "Nombre_usuario": "RosalesRodri",
+    "Nombre_real": "Rodrigo Rosales Barrio",
+    "Rut": "16.057.225-5",
+    "Edad": "37",
+    "Mascota_favorita": "Pez",
+    "Raza_favorita": "Payaso",
+    "Email": "Rodrigorosales544@hotmail.com",
+    "Dirección": "Zofri Manzana 9",
+    "Ciudad": "Iquique"
+  },
+  {
+    "_id": {
+      "$oid": "6322b8f5d709f3bb91690934"
+    },
+    "Nombre_usuario": "Etormo21",
+    "Nombre_real": "Esteban Tormo Frutos",
+    "Rut": "14.254.821-K",
+    "Edad": "43",
+    "Mascota_favorita": "Conejo",
+    "Raza_favorita": "Rex",
+    "Email": "EstebanTormoF65@gmail.com",
+    "Dirección": "Nontuela Alto",
+    "Ciudad": "Futrono"
+  },
+  {
+    "_id": {
+      "$oid": "6322b9f4e4a824c01038c228"
+    },
+    "Nombre_usuario": "YGuardia",
+    "Nombre_real": "Yéssica Guardia López",
+    "Rut": "16.784.446-4",
+    "Edad": "34",
+    "Mascota_favorita": "Perro",
+    "Raza_favorita": "Pastor Aleman",
+    "Email": "YessicaGuardia34@gmail.com",
+    "Dirección": "Pasaje Manuel Rodríguez, 1308",
+    "Ciudad": "Valdivia"
+  },
+  {
+    "_id": {
+      "$oid": "6322bdd5b6b8e00139d4ff7d"
+    },
+    "Nombre_usuario": "RosaHierro",
+    "Nombre_real": "Rosalina Hierro",
+    "Rut": "18.452.322-8",
+    "Edad": "28",
+    "Mascota_favorita": "Perro",
+    "Raza_favorita": "Poodle",
+    "Email": "RosalinaHierro2021@gmail.com",
+    "Dirección": "Germán Riesco 399, Zapallar",
+    "Ciudad": "Zapallar"
+  },
+  {
+    "_id": {
+      "$oid": "6322bee9c9d7178576aa4901"
+    },
+    "Nombre_usuario": "GeraldoVS",
+    "Nombre_real": "Geraldo Valenciano Salom",
+    "Rut": "19.374.526-2",
+    "Edad": "25",
+    "Mascota_favorita": "Gato",
+    "Raza_favorita": "Birmano",
+    "Email": "GerardoValenciano223@gmail.com",
+    "Dirección": "Pasaje Puerto Natales, 6208",
+    "Ciudad": "Temuco"
+  },
+  {
+    "_id": {
+      "$oid": "6322c00029efc66909baa524"
+    },
+    "Nombre_usuario": "Melisaez",
+    "Nombre_real": "Melisa Vanesa Sáez Porcel",
+    "Rut": "18.324.523-3",
+    "Edad": "29",
+    "Mascota_favorita": "Hamster",
+    "Raza_favorita": "Sirio",
+    "Email": "Melisaez445@gmail.com",
+    "Dirección": "Fco. Antonio Encina",
+    "Ciudad": "Rancagua"
+  },
+  {
+    "_id": {
+      "$oid": "63231757ef99f34cfcaef7d4"
+    },
+    "Nombre_usuario": "Nescudero",
+    "Nombre_real": "Nicolás Escudero Oliveras",
+    "Rut": "19.890.999-4",
+    "Edad": "23",
+    "Mascota_favorita": "Perro",
+    "Raza_favorita": "Akita",
+    "Email": "Nescudero21@gmail.com",
+    "Dirección": "Avenida Independencia, 2998",
+    "Ciudad": "Santiago"
+  },
+  {
+    "_id": {
+      "$oid": "632317e9e34b02beb1577a9b"
+    },
+    "Nombre_usuario": "AnibalC2",
+    "Nombre_real": "Aníbal Cuenca Cabello",
+    "Rut": "14.274.492-2",
+    "Edad": "43",
+    "Mascota_favorita": "Perro",
+    "Raza_favorita": "Pug",
+    "Email": "Anibalescudero2014@gmail.com",
+    "Dirección": "Avenida Cartagena, 285",
+    "Ciudad": "Coquimbo"
+  },
+  {
+    "_id": {
+      "$oid": "6323186ce3415ed41e4c9a70"
+    },
+    "Nombre_usuario": "Ivañeznavas",
+    "Nombre_real": "Iván Ibañez Navas",
+    "Rut": "10.247.123-K",
+    "Edad": "57",
+    "Mascota_favorita": "Perro",
+    "Raza_favorita": "San Bernardo",
+    "Email": "Ivanibañez53@gmail.com",
+    "Dirección": "Calle Obispo Eduardo Gimpert, 1130",
+    "Ciudad": "Valparaiso"
+  },
+  {
+    "_id": {
+      "$oid": "63231938ad167c05322793d6"
+    },
+    "Nombre_usuario": "MaxiVazquez",
+    "Nombre_real": "Maximiano Vázquez Zabala",
+    "Rut": "20.472.142-2",
+    "Edad": "21",
+    "Mascota_favorita": "Gato",
+    "Raza_favorita": "Romano",
+    "Email": "MaxiVazques04@gmail.com",
+    "Dirección": "Calle Blanco Encalada 1270 población Granja",
+    "Ciudad": "Rancagua"
+  },
+  {
+    "_id": {
+      "$oid": "632319d863fb77cba2f31a04"
+    },
+    "Nombre_usuario": "ReinaCasares3",
+    "Nombre_real": "Reina Casares Prieto",
+    "Rut": "2.523.122-1",
+    "Edad": "74",
+    "Mascota_favorita": "Gato",
+    "Raza_favorita": "Chinchilla",
+    "Email": "MaxiVazques04@gmail.com",
+    "Dirección": "Mariano Latorre 1942",
+    "Ciudad": "Concepcion"
+  },
+  {
+    "_id": {
+      "$oid": "63231a8696f68df762493173"
+    },
+    "Nombre_usuario": "JessiPadilla45",
+    "Nombre_real": "Jessica Padilla Alegre",
+    "Rut": "9.204.323-K",
+    "Edad": "60",
+    "Mascota_favorita": "Gato",
+    "Raza_favorita": "Americano",
+    "Email": "JessipadillaAlegre89@hotmail.com",
+    "Dirección": "Altamirano 2312",
+    "Ciudad": "Santiago"
+  },
+  {
+    "_id": {
+      "$oid": "63231b4842ca37f0bf68ce7a"
+    },
+    "Nombre_usuario": "AAguirreM",
+    "Nombre_real": "Armando Aguirre Múgica",
+    "Rut": "17.283.622-3",
+    "Edad": "32",
+    "Mascota_favorita": "Perro",
+    "Raza_favorita": "Quiltro",
+    "Email": "Aaguirre323@gmail.com",
+    "Dirección": "Calle Manuel Montt, 1370",
+    "Ciudad": "Talca"
+  },
+  {
+    "_id": {
+      "$oid": "63231bca4e6d4faf71d32f9d"
+    },
+    "Nombre_usuario": "EmiliaBau4",
+    "Nombre_real": "Emilia Bautista Barros",
+    "Rut": "19.987.364-3",
+    "Edad": "23",
+    "Mascota_favorita": "Hamster",
+    "Raza_favorita": "Chihuahua",
+    "Email": "EmiliaBautista46@gmail.com",
+    "Dirección": "Calle León Xiii, 1339",
+    "Ciudad": "Chillan"
+  },
+  {
+    "_id": {
+      "$oid": "63231c62e2c451563442a32d"
+    },
+    "Nombre_usuario": "Natipinedo",
+    "Nombre_real": "Natalia Pinedo Vilaplana",
+    "Rut": "18.293.766-8",
+    "Edad": "29",
+    "Mascota_favorita": "Tortuga",
+    "Raza_favorita": "Rusa",
+    "Email": "NatipinedoV1@gmail.com",
+    "Dirección": " Paseo 21 De Mayo, 583 - Loc. 883",
+    "Ciudad": "Osorno"
+  },
+  {
+    "_id": {
+      "$oid": "63231cf06a43a33ac5fd141d"
+    },
+    "Nombre_usuario": "EricMaldonado1",
+    "Nombre_real": "Eric Maldonado Romero",
+    "Rut": "19.335.226-1",
+    "Edad": "25",
+    "Mascota_favorita": "Perro",
+    "Raza_favorita": "Quiltro",
+    "Email": "Ericmaldonado33@gmail.com",
+    "Dirección": "Manuel Bulnes 256",
+    "Ciudad": "Temuco"
+  }
+]
+
+    );
+
+// Return all the fields in the continents collection
+db.datos_usuario.find();
