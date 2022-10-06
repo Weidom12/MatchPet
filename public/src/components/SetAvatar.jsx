@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { Buffer } from "buffer";
-import loader from "../assets/loader.gif";
+import loader from "../assets/charging.gif";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { setAvatarRoute } from "../utils/APIRoutes";
+
 export default function SetAvatar() {
   const api = `https://api.multiavatar.com/4645646`;
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ export default function SetAvatar() {
 
   const setProfilePicture = async () => {
     if (selectedAvatar === undefined) {
-      toast.error("Please select an avatar", toastOptions);
+      toast.error("Selecciona un Avatar", toastOptions);
     } else {
       const user = await JSON.parse(
         localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
@@ -47,7 +48,7 @@ export default function SetAvatar() {
         );
         navigate("/");
       } else {
-        toast.error("Error setting avatar. Please try again.", toastOptions);
+        toast.error("Error, Prueba de nuevo.", toastOptions);
       }
     }
   };
@@ -64,7 +65,12 @@ export default function SetAvatar() {
     setAvatars(data);
     setIsLoading(false);
   }, []);
-  return (
+  
+  function refreshPage() {    //refresca los íconos
+    window.location.reload(false);
+  }
+
+  return (            //html para los avatar
     <>
       {isLoading ? (
         <Container>
@@ -72,10 +78,10 @@ export default function SetAvatar() {
         </Container>
       ) : (
         <Container>
-          <div className="title-container">
-            <h1>Pick an Avatar as your profile picture</h1>
+          <div className="title-container">               
+            <h1>Escoge un avatar para tu usuario</h1>
           </div>
-          <div className="avatars">
+          <div className="avatars">                       
             {avatars.map((avatar, index) => {
               return (
                 <div
@@ -93,8 +99,13 @@ export default function SetAvatar() {
               );
             })}
           </div>
-          <button onClick={setProfilePicture} className="submit-btn">
-            Set as Profile Picture
+          
+          <button onClick={setProfilePicture} className = "submit-btn">
+            Guardar como foto de perfil
+          </button>
+
+          <button onClick={refreshPage} className = "submit-btn">
+            Más íconos
           </button>
           <ToastContainer />
         </Container>

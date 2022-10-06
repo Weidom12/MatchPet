@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import { useNavigate, Link } from "react-router-dom";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/logos.webp";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { loginRoute } from "../utils/APIRoutes";
@@ -30,10 +30,10 @@ export default function Login() {
   const validateForm = () => {
     const { username, password } = values;
     if (username === "") {
-      toast.error("Email and Password is required.", toastOptions);
+      toast.error("Ingresa el correo y la contraseña.", toastOptions);
       return false;
     } else if (password === "") {
-      toast.error("Email and Password is required.", toastOptions);
+      toast.error("Ingresa el correo y la contraseña.", toastOptions);
       return false;
     }
     return true;
@@ -67,24 +67,24 @@ export default function Login() {
         <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h1>snappy</h1>
+            <h1>Matchpet</h1>
           </div>
           <input
             type="text"
-            placeholder="Username"
+            placeholder="Usuario"
             name="username"
             onChange={(e) => handleChange(e)}
             min="3"
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             name="password"
             onChange={(e) => handleChange(e)}
           />
-          <button type="submit">Log In</button>
+          <button type="submit">Iniciar Sesión</button>
           <span>
-            Don't have an account ? <Link to="/register">Create One.</Link>
+            ¿Aún no estás registrado? <Link to="/register">Regístrate aquí.</Link>
           </span>
         </form>
       </FormContainer>
@@ -94,6 +94,13 @@ export default function Login() {
 }
 
 const FormContainer = styled.div`
+  background: linear-gradient(
+  rgba(255, 255, 255, 0.7),
+  rgba(255, 255, 255, 0.3)
+  ),
+  url("https://www.vfcabogados.cl/wp-content/uploads/2018/10/tenencia-responsable-mascotas-Informativo.jpg");
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -116,11 +123,11 @@ const FormContainer = styled.div`
     }
   }
 
-  form {
+  form {    
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-color: #00000076;
+    background-color: black;
     border-radius: 2rem;
     padding: 5rem;
   }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import { useNavigate, Link } from "react-router-dom";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/logos.webp";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { registerRoute } from "../utils/APIRoutes";
@@ -37,24 +37,24 @@ export default function Register() {
     const { password, confirmPassword, username, email } = values;
     if (password !== confirmPassword) {
       toast.error(
-        "Password and confirm password should be same.",
+        "Ambas contraseñas deben ser iguales.",
         toastOptions
       );
       return false;
     } else if (username.length < 3) {
       toast.error(
-        "Username should be greater than 3 characters.",
+        "Nombre de usuario debe tener mas de 3 carácteres.",
         toastOptions
       );
       return false;
     } else if (password.length < 8) {
       toast.error(
-        "Password should be equal or greater than 8 characters.",
+        "Constraseña debe contener al menos 8 carácteres.",
         toastOptions
       );
       return false;
     } else if (email === "") {
-      toast.error("Email is required.", toastOptions);
+      toast.error("Correo es necesario.", toastOptions);
       return false;
     }
 
@@ -90,35 +90,35 @@ export default function Register() {
         <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h1>snappy</h1>
+            <h1>Matchpet</h1>
           </div>
           <input
             type="text"
-            placeholder="Username"
+            placeholder = "Usuario"
             name="username"
             onChange={(e) => handleChange(e)}
           />
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Correo"
             name="email"
             onChange={(e) => handleChange(e)}
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             name="password"
             onChange={(e) => handleChange(e)}
           />
           <input
             type="password"
-            placeholder="Confirm Password"
+            placeholder="Confirma la contraseña"
             name="confirmPassword"
             onChange={(e) => handleChange(e)}
           />
-          <button type="submit">Create User</button>
+          <button type="submit">Crear Usuario</button>
           <span>
-            Already have an account ? <Link to="/login">Login.</Link>
+            ¿Ya tienes una cuenta? <Link to="/login">Ingresa aquí.</Link>
           </span>
         </form>
       </FormContainer>
@@ -128,6 +128,13 @@ export default function Register() {
 }
 
 const FormContainer = styled.div`
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  ),
+  url("https://www.vfcabogados.cl/wp-content/uploads/2018/10/tenencia-responsable-mascotas-Informativo.jpg");
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -154,7 +161,7 @@ const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-color: #00000076;
+    background-color: black;
     border-radius: 2rem;
     padding: 3rem 5rem;
   }

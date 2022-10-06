@@ -1,6 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { BiPowerOff } from "react-icons/bi";
+import { MdLogout } from "react-icons/bi";
+import { CgLogOut} from 'react-icons/cg';
+
+
+
 import styled from "styled-components";
 import axios from "axios";
 import { logoutRoute } from "../utils/APIRoutes";
@@ -18,7 +22,7 @@ export default function Logout() {
   };
   return (
     <Button onClick={handleClick}>
-      <BiPowerOff />
+      <CgLogOut />
     </Button>
   );
 }

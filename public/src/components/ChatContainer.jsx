@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import ChatInput from "./ChatInput";
-import Logout from "./Logout";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { sendMessageRoute, recieveMessageRoute } from "../utils/APIRoutes";
@@ -83,7 +82,7 @@ export default function ChatContainer({ currentChat, socket }) {
             <h3>{currentChat.username}</h3>
           </div>
         </div>
-        <Logout />
+        
       </div>
       <div className="chat-messages">
         {messages.map((message) => {
@@ -137,6 +136,16 @@ const Container = styled.div`
     }
   }
   .chat-messages {
+
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("https://previews.123rf.com/images/telmanbagirov/telmanbagirov1803/telmanbagirov180300006/96954735-patr%C3%B3n-de-iconos-de-vida-sosial-transparente-gris-sobre-fondo-blanco.jpg
+    ");
+    background-size: cover;
+    background-position: center;
+    
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
@@ -168,13 +177,13 @@ const Container = styled.div`
     .sended {
       justify-content: flex-end;
       .content {
-        background-color: #4f04ff21;
+        background-color: blue;
       }
     }
     .recieved {
       justify-content: flex-start;
       .content {
-        background-color: #9900ff20;
+        background-color: red;
       }
     }
   }
