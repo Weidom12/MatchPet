@@ -84,7 +84,7 @@ export default function Login() {
           />
           <button type="submit">Iniciar Sesión</button>
           <span>
-            ¿Aún no estás registrado? <Link to="/register">Regístrate aquí.</Link>
+             <Link to="/register">¿Aún no estás registrado?</Link>
           </span>
         </form>
       </FormContainer>

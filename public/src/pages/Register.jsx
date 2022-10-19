@@ -118,7 +118,7 @@ export default function Register() {
           />
           <button type="submit">Crear Usuario</button>
           <span>
-            ¿Ya tienes una cuenta? <Link to="/login">Ingresa aquí.</Link>
+             <Link to="/login">¿Ya tienes una cuenta?</Link>
           </span>
         </form>
       </FormContainer>

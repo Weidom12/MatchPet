@@ -16,7 +16,6 @@ module.exports.login = async (req, res, next) => {
     next(ex);
   }
 };
-
 module.exports.register = async (req, res, next) => {
   try {
     const { username, email, password } = req.body;
@@ -52,6 +51,9 @@ module.exports.getAllUsers = async (req, res, next) => {
     next(ex);
   }
 };
+module.exports.findpet = ()=>{
+  
+}
 
 module.exports.setAvatar = async (req, res, next) => {
   try {
