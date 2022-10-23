@@ -1,13 +1,24 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from 'react-bootstrap';
+import { Button, CardGroup, CardImg } from 'react-bootstrap';
 import {Container, Row, Col} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Izquierda from "../assets/arrow_izq.png";
 import Imagen from "../assets/gato_1.jpg";
 import Derecha from "../assets/arrow_der.png";
 import Navbar from "../components/Navbar";
+import Patas from "../assets/patas.png";
 
+import { BsFillHeartFill,BsFillArrowRightCircleFill,BsFillArrowLeftCircleFill } from 'react-icons/bs';
+
+import Ico from "../assets/love.png";
+import Card from 'react-bootstrap/Card';
 export default function Findpet() {
+  const divtitle = {'text-align':'center'};
+  const OnClick=(event) => {
+
+    
+  };
+
   const navigate = useNavigate();
   const openMenu = async () => {
     localStorage.clear();
@@ -16,28 +27,85 @@ export default function Findpet() {
 
   return (
     <>
+    <html style={{'background-color':'#dee2e6'}}>
     <Navbar/>
       <div className="Findpet">
         <header className="Findpet-header">
         </header>
       </div>
-    <Container>
-      <Row>
-        <Col><img src={Izquierda} width="100vh" style={{margin: "250px 50px 50px 50px"}}></img></Col>
-        <Col style={{width: "80vh"}}><img src={Imagen} style={{width:"80vh"}}></img></Col>
-        <Col><img src={Derecha} width="100vh" style={{margin: "250px 50px 50px 50px"}}></img> </Col>
+    <Container >
+      <Row style={{height:'1000vh'}}>
+        
+        <Col style={{width: '50vh', height: '70vh','border-size':'10px','border-color':'black'}}>
+          <h4>Buscar otros match</h4>
+          <Row>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+          </Row>
+          <Row>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+          </Row>
+          <Row>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+          </Row>
+          <Row>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+          </Row>
+          <Row>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+            <Col style={{height:"10vh"}} ><CardImg style={{height:"10vh"}} src={Patas}></CardImg></Col>
+          </Row>
+        </Col>
+
+        <Col>
+        </Col>
+        
+        <Col>
+          <Card style={{ width: '50vh', height: '70vh', 'border-radius': '10px', "box-shadow": "10px 5px 5px black"}} >
+            <Card.Img variant="top" src={Imagen} style={{height:'100%'}} />
+            <Card.Body style={{position:'absolute',top:'40vh ','background-color':"rgba(0, 0, 0, 0.2)", color:'white'}}>
+              <Card.Title style={divtitle}>Rachel</Card.Title>
+              <Card.Text>
+                Una perfecta compañera para explorar, juguetona y muy cariñosa.
+              </Card.Text>
+              <Row>
+                <Col style={{'text-Align':'center'}}><img src={Izquierda} style={{height:'8vh'}}></img></Col>
+                <Col style={{height:'12vh', 'text-Align':'center'}}><img src={Ico} style={{height:'10vh'}} ></img></Col>
+                <Col style={{'text-Align':'center',color:'white'}}><img src={Derecha} style={{height:'8vh'}}></img> </Col>
+                
+              </Row>
+            </Card.Body>
+          </Card>
+          <Card style={{ visibility:"hidden", width: '50vh', height: '70vh', 'border-radius': '10px', "box-shadow": "10px 5px 5px black"}} >
+            <Card.Img variant="top" src={Imagen} style={{height:'100%'}} />
+            <Card.Body style={{position:'absolute',top:'40vh ','background-color':"rgba(0, 0, 0, 0.2)", color:'white'}}>
+              <Card.Title style={divtitle}>Rachel</Card.Title>
+              <Card.Text>
+                Una perfecta compañera para explorar, juguetona y muy cariñosa.
+              </Card.Text>
+              <Row>
+                <Col style={{'text-Align':'center'}}><img src={Izquierda} style={{height:'8vh'}}></img></Col>
+                <Col style={{height:'12vh', 'text-Align':'center'}}><img src={Ico} style={{height:'10vh'}} ></img></Col>
+                <Col style={{'text-Align':'center',color:'white'}}><img src={Derecha} style={{height:'8vh'}}></img> </Col>
+                
+              </Row>
+            </Card.Body>
+          </Card>
+          
+          
+          </Col>
       </Row>
-      <Row>
-        <Col></Col>
-        <Col style={{align:"center"}}><Button>Match</Button></Col>
-        <Col></Col>
-      </Row>
-      <Row>
-        <Col></Col>
-        <Col style={{align:"center"}}><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum ante, vitae commodo libero. Mauris semper sagittis sem quis porta. Nulla in sapien nec odio scelerisque malesuada. In eu justo risus. Pellentesque luctus neque at neque lobortis suscipit. Nam et mi purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus, metus eu condimentum efficitur, elit nibh auctor tellus, sit amet interdum urna erat non turpis. Cras quam ante, facilisis eget tincidunt at, dictum et velit. Suspendisse potenti. Sed eu justo nec lacus pellentesque ornare eget non mi. Morbi nec aliquet dui. In eros massa, consequat sodales tortor a, commodo lacinia nulla. Nunc gravida blandit velit, varius tempus erat dignissim in. Fusce egestas sapien magna, quis viverra est sollicitudin eu. Nunc dictum lorem quis pretium venenatis.</p></Col>
-        <Col></Col>
-      </Row>
+      
       </Container>
+      </html>
     </>
   );
   }
