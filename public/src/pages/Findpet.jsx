@@ -1,73 +1,43 @@
-import { findpetRoute } from "../utils/APIRoutes";
-import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { Button } from 'react-bootstrap';
 import {Container, Row, Col} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Imagen from "../assets/perro.gif";
 import Izquierda from "../assets/arrow_izq.png";
+import Imagen from "../assets/gato_1.jpg";
 import Derecha from "../assets/arrow_der.png";
-
-import { FiChevronLeft } from "react-icons/fi";
+import Navbar from "../components/Navbar";
 
 export default function Findpet() {
   const navigate = useNavigate();
   const openMenu = async () => {
     localStorage.clear();
-      navigate("/home");
+      navigate("/");
   };
 
-    return (
-        <>
-        <div>
-          <Navbar>
-              <ul>
-                <li><a onClick={openMenu}>Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
-              </ul>
-          </Navbar> 
-          </div>
-          <Container>
-            <Row>
-              <Col><img src={Izquierda} width="100vh" style={{margin: "250px 50px 50px 50px"}}></img></Col>
-              <Col><img src={Imagen}></img></Col>
-              <Col><img src={Derecha} width="100vh" style={{margin: "250px 50px 50px 50px"}}></img> </Col>
-            </Row>
-            <Row>
-              <Col></Col>
-              <Col style={{align:"center"}}><Button>Match</Button></Col>
-              <Col></Col>
-            </Row>
-         </Container>
-        </>
-      );
-}
-
-const Navbar = styled.div`
-width=100%;
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}`
+  return (
+    <>
+    <Navbar/>
+      <div className="Findpet">
+        <header className="Findpet-header">
+        </header>
+      </div>
+    <Container>
+      <Row>
+        <Col><img src={Izquierda} width="100vh" style={{margin: "250px 50px 50px 50px"}}></img></Col>
+        <Col style={{width: "80vh"}}><img src={Imagen} style={{width:"80vh"}}></img></Col>
+        <Col><img src={Derecha} width="100vh" style={{margin: "250px 50px 50px 50px"}}></img> </Col>
+      </Row>
+      <Row>
+        <Col></Col>
+        <Col style={{align:"center"}}><Button>Match</Button></Col>
+        <Col></Col>
+      </Row>
+      <Row>
+        <Col></Col>
+        <Col style={{align:"center"}}><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in dictum ante, vitae commodo libero. Mauris semper sagittis sem quis porta. Nulla in sapien nec odio scelerisque malesuada. In eu justo risus. Pellentesque luctus neque at neque lobortis suscipit. Nam et mi purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus, metus eu condimentum efficitur, elit nibh auctor tellus, sit amet interdum urna erat non turpis. Cras quam ante, facilisis eget tincidunt at, dictum et velit. Suspendisse potenti. Sed eu justo nec lacus pellentesque ornare eget non mi. Morbi nec aliquet dui. In eros massa, consequat sodales tortor a, commodo lacinia nulla. Nunc gravida blandit velit, varius tempus erat dignissim in. Fusce egestas sapien magna, quis viverra est sollicitudin eu. Nunc dictum lorem quis pretium venenatis.</p></Col>
+        <Col></Col>
+      </Row>
+      </Container>
+    </>
+  );
+  }

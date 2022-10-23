@@ -7,7 +7,7 @@ import { allUsersRoute, host } from "../utils/APIRoutes";
 import ChatContainer from "../components/ChatContainer";
 import Contacts from "../components/Contacts";
 import Welcome from "../components/Welcome";
-
+import Navbar from "../components/Navbar";
 export default function Chat() {
   const navigate = useNavigate();
   const socket = useRef();
@@ -47,6 +47,11 @@ export default function Chat() {
   };
   return (
     <>
+      <Navbar/>
+      <div className="Findpet">
+        <header className="Findpet-header">
+        </header>
+      </div>
       <Container>
         <div className="container">
           <Contacts contacts={contacts} changeChat={handleChatChange} />

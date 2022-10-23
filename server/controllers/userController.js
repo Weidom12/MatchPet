@@ -54,7 +54,9 @@ module.exports.getAllUsers = async (req, res, next) => {
 module.exports.findpet = ()=>{
   
 }
-
+module.exports.home = ()=>{
+  
+}
 module.exports.setAvatar = async (req, res, next) => {
   try {
     const userId = req.params.id;

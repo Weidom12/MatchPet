@@ -6,6 +6,7 @@ import Logo from "../assets/logos.webp";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { loginRoute } from "../utils/APIRoutes";
+import Navbar from "../components/Navbar";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -63,6 +64,11 @@ export default function Login() {
 
   return (
     <>
+      <Navbar/>
+      <div className="Findpet">
+        <header className="Findpet-header">
+        </header>
+        </div>
       <FormContainer>
         <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
