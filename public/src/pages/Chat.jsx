@@ -8,6 +8,7 @@ import ChatContainer from "../components/ChatContainer";
 import Contacts from "../components/Contacts";
 import Welcome from "../components/Welcome";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 export default function Chat() {
   const navigate = useNavigate();
   const socket = useRef();
@@ -62,6 +63,7 @@ export default function Chat() {
           )}
         </div>
       </Container>
+      <Footer/>
     </>
   );
 }

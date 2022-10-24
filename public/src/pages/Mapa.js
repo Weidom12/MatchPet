@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import '../components/index.css';
 import Logo from "../assets/logos.webp";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 
 const Mapa = () => {
@@ -75,7 +76,7 @@ const handleInputCorreo3 = (e) => {
 			<form action="" onSubmit={handleSubmit} className="formulario">
 			
 				<div>
-				<h1>Matchpet map</h1>
+				<h1>Formulario mascota</h1>
 					<label htmlFor="nombre">Nombre</label>
 					<input
 						type="text"
@@ -172,6 +173,7 @@ const handleInputCorreo3 = (e) => {
 			
 			</form>
 			</div>
+			<Footer/>
 		</>	
       
 

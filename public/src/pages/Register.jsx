@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { registerRoute } from "../utils/APIRoutes";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -129,6 +130,7 @@ export default function Register() {
         </form>
       </FormContainer>
       <ToastContainer />
+      <Footer/>
     </>
   );
 }
