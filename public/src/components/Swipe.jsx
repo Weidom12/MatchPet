@@ -32,8 +32,16 @@ export default function Swipe() {
             localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
         ).username
         )});
- const handleClick = async () => {
-    alert("esto es una alerta");
+ const handleClickI = async () => {
+    alert("Swipe a la Izquierda");
+        
+    };
+const handleClickMatch = async () => {
+    alert("Hiciste Match!!!");
+        
+    };
+ const handleClickD = async () => {
+    alert("Swipe a la derecha");
         
     };
     return (
@@ -46,9 +54,9 @@ export default function Swipe() {
                             Una perfecta compañera para explorar, juguetona y muy cariñosa.
                             </Card.Text>
                             <Row>
-                                <Col style={{'text-Align':'center'}}><img src={Izquierda} style={{height:'8vh' }}></img></Col>
-                                <Col style={{height:'12vh', 'text-Align':'center'}}><img src={Ico} style={{height:'10vh'}} ></img></Col>
-                                <Col style={{'text-Align':'center',color:'white'}}><img src={Derecha} style={{height:'8vh'}} onClick={handleClick}></img> </Col>
+                                <Col style={{'text-Align':'center'}}><img src={Izquierda} style={{height:'8vh' }} onClick={handleClickI}></img></Col>
+                                <Col style={{height:'12vh', 'text-Align':'center'}}><img src={Ico} style={{height:'10vh'}} onClick={handleClickMatch}></img></Col>
+                                <Col style={{'text-Align':'center',color:'white'}}><img src={Derecha} style={{height:'8vh'}} onClick={handleClickD}></img> </Col>
                                 
                             </Row>
                     </Card.Body>

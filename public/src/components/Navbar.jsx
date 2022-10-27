@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import BurguerButton from './BurgerButton'
-
+import Logout from './Logout'
 function Navbar(){
 
     const [clicked, setClicked] = useState(false)
@@ -22,6 +22,9 @@ function Navbar(){
                 <a href='/mapa'>Mapa</a>
                 <a href='/register'>Registrate</a>
                 <a href='/login'>Inicia Sesión</a>
+                <button >
+                    <Logout/>
+                </button>
                 
             </div>
             <div className='burguer'>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../assets/logos.webp";
-import Logout from "./Logout";
+import Configurations from "./Configurations";
 
 export default function Contacts({ contacts, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
@@ -22,17 +22,8 @@ export default function Contacts({ contacts, changeChat }) {
     <>
       {currentUserImage && currentUserImage && (
         <Container>
-          <div className="current-user">
-            <div className="avatar">
-              <img
-                src={`data:image/svg+xml;base64,${currentUserImage}`}
-                alt="avatar"
-              />
-            </div>
-            <div className="username">
-              <h2>{currentUserName}</h2>
-            </div>
-            <Logout />
+          <div className="brand">
+            <h3>Chats</h3>
           </div>
 
           <div className="contacts">
@@ -58,11 +49,18 @@ export default function Contacts({ contacts, changeChat }) {
               );
             })}
           </div>
-          <div className="brand">
-            <img src={Logo} alt="logo" width={50} height={50}/>
-            <h3>Matchpet</h3>
+          <div className="current-user">
+            <div className="avatar">
+              <img
+                src={`data:image/svg+xml;base64,${currentUserImage}`}
+                alt="avatar"
+              />
+            </div>
+            <div className="username">
+              <h2>{currentUserName}</h2>
+            </div>
+            <Configurations />
           </div>
-          
           
         </Container>
       )}
