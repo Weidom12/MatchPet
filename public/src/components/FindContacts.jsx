@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Logo from "../assets/logos.webp";
 import Logout from "./Logout";
 
-export default function Contacts({ contacts, changeChat }) {
+export default function FindContacts({ contacts, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
   const [currentUserImage, setCurrentUserImage] = useState(undefined);
   const [currentSelected, setCurrentSelected] = useState(undefined);
@@ -15,13 +15,17 @@ export default function Contacts({ contacts, changeChat }) {
     setCurrentUserImage(data.avatarImage);
   }, []);
   const changeCurrentChat = (index, contact) => {
-    setCurrentSelected(index);
+    //setCurrentSelected(index);
     changeChat(contact);
   };
   return (
     <>
       {currentUserImage && currentUserImage && (
         <Container>
+          <div className="current-user">
+            <h3>Encuentra tu match </h3>
+          </div>
+
           <div className="contacts">
             {contacts.map((contact, index) => {
               return (
@@ -31,21 +35,36 @@ export default function Contacts({ contacts, changeChat }) {
                     index === currentSelected ? "selected" : ""
                   }`}
                   onClick={() => changeCurrentChat(index, contact)}
-                  
                 >
-                  <div className="avatar">
-                    <img
-                      src={`data:image/svg+xml;base64,${contact.avatarImage}`}
-                      alt=""
-                    />
-                  </div>
-                  <div className="username">
-                    <h3>{contact.username}</h3>
-                  </div>
+                    
+                    <div className="avatar">
+                        <img
+                        src={`data:image/svg+xml;base64,${contact.avatarImage}`}
+                        alt=""
+                        />
+                    </div>
+                    <div className="avatar">
+                        <img
+                        src={`data:image/svg+xml;base64,${contact.avatarImage}`}
+                        alt=""
+                        />
+                    </div>
+                    <div className="avatar">
+                        <img
+                        src={`data:image/svg+xml;base64,${contact.avatarImage}`}
+                        alt=""
+                        />
+                    </div>
                 </div>
               );
             })}
           </div>
+          <div className="brand">
+            <img src={Logo} alt="logo" width={50} height={50}/>
+            <h3>Matchpet</h3>
+          </div>
+          
+          
         </Container>
       )}
     </>
@@ -55,7 +74,22 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
-
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px black;
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    img {
+      height: 2rem;
+    }
+    h3 {
+      color: White;
+      text-transform: uppercase;
+    }
+  }
   .contacts {
     display: flex;
     flex-direction: column;
@@ -63,6 +97,7 @@ const Container = styled.div`
     overflow: auto;
     gap: 0.8rem;
     &::-webkit-scrollbar {
+      background-color:black;
       width: 0.2rem;
       &-thumb {
         
@@ -84,8 +119,13 @@ const Container = styled.div`
       .avatar {
         img {
           height: 3rem;
+          width: 5rem;
+
         }
       }
+    }
+    .selected {
+      background-color: #9a86f3;
     }
   }
 

@@ -72,7 +72,7 @@ const Container = styled.div`
 background-size: cover;
 background-position: center;
 
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -80,11 +80,12 @@ background-position: center;
   gap: 1rem;
   align-items: center;
 
+  background-color: #008080;
   .container {
     height: 100%;
     width: 100%;
     padding: 0;
-    background-color: #008080;
+    background-color: rgba(150, 148, 148, 0.5);
     display: grid;
     grid-template-columns: 25% 75%;
     @media screen and (min-width: 720px) and (max-width: 1080px) {
