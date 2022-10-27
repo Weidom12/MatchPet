@@ -69,12 +69,6 @@ export default function Chat() {
 }
 
 const Container = styled.div`
-background: linear-gradient(
-  rgba(255, 255, 255, 0.7),
-  rgba(255, 255, 255, 0.3)
-),
-url("https://us.123rf.com/450wm/sgtsagan/sgtsagan1905/sgtsagan190500444/122251301-fondo-de-pantalla-hermoso-claro-colorido-f%C3%A1cil-y-n%C3%ADtido-bonito-fondo-simple-textura-gr%C3%A1fica-de-malla.jpg?ver=6
-");
 background-size: cover;
 background-position: center;
 
@@ -85,12 +79,12 @@ background-position: center;
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color: #7FFFD4;
 
   .container {
-    height: 85vh;
-    width: 85vw;
-    background-color: #00000076;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background-color: #008080;
     display: grid;
     grid-template-columns: 25% 75%;
     @media screen and (min-width: 720px) and (max-width: 1080px) {

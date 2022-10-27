@@ -73,7 +73,7 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
-  background-color: #080420;
+  border-color:black;
   .brand {
     display: flex;
     align-items: center;
@@ -83,7 +83,7 @@ const Container = styled.div`
       height: 2rem;
     }
     h3 {
-      color: white;
+      color: Black;
       text-transform: uppercase;
     }
   }
@@ -94,15 +94,16 @@ const Container = styled.div`
     overflow: auto;
     gap: 0.8rem;
     &::-webkit-scrollbar {
+      background-color:black;
       width: 0.2rem;
       &-thumb {
-        background-color: #ffffff39;
+        
         width: 0.1rem;
         border-radius: 1rem;
       }
     }
     .contact {
-      background-color: #ffffff34;
+      
       min-height: 5rem;
       cursor: pointer;
       width: 90%;
@@ -119,7 +120,7 @@ const Container = styled.div`
       }
       .username {
         h3 {
-          color: white;
+          color: Black;
         }
       }
     }
@@ -129,7 +130,6 @@ const Container = styled.div`
   }
 
   .current-user {
-    background-color: #0d0d30;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,7 +142,7 @@ const Container = styled.div`
     }
     .username {
       h2 {
-        color: white;
+        color: Black;
       }
     }
     @media screen and (min-width: 720px) and (max-width: 1080px) {

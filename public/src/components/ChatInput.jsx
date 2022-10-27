@@ -29,10 +29,7 @@ export default function ChatInput({ handleSendMsg }) {
     <Container>
         <div className="button-container">
             íconos  
-        {  <div className="emoji">
-            <BsEmojiSmileFill onClick={handleEmojiPickerhideShow} />
-            {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
-          </div>}
+        {  }
         </div>
         <form className="input-container" onSubmit={(event) => sendChat(event)}>
           <input
@@ -53,7 +50,7 @@ const Container = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: 5% 95%;
-  background-color: #080420;
+  background-color: Black;
   padding: 0 2rem;
   @media screen and (min-width: 720px) and (max-width: 1080px) {
     padding: 0 1rem;
@@ -72,7 +69,6 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 2rem;
-    background-color: black;
     input {
       width: 90%;
       height: 60%;
@@ -95,7 +91,7 @@ const Container = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #9a86f3;
+      background-color: #white;
       border: none;
       @media screen and (min-width: 720px) and (max-width: 1080px) {
         padding: 0.3rem 1rem;
@@ -105,7 +101,7 @@ const Container = styled.div`
       }
       svg {
         font-size: 2rem;
-        color: white;
+        color: Blue;
       }
     }
   }
