@@ -16,7 +16,7 @@ export default function Home() {
     <Container>
         <div className="App">
         <header className="App-header">
-            <h1 className="title">Bienvenido a MatchPet</h1>    
+            <h1 className="title">Bienvenido as MatchPet</h1>    
         </header>
     
     </div></Container>
@@ -27,7 +27,6 @@ export default function Home() {
   
 const Container = styled.div`
 .App-header {
-    background-image: linear-gradient(to left,pink,orange);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
