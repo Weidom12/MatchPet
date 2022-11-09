@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <>
     <Navbar/>
-    <Container>
+    <Container >
         <div className="App">
         <header className="App-header">
-            <h1 className="title">Bienvenido as MatchPet</h1>    
+            <h1 className="title">Bienvenido a MatchPet</h1>    
         </header>
     
     </div></Container>
@@ -26,13 +26,15 @@ export default function Home() {
   }
   
 const Container = styled.div`
+
 .App-header {
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: Black;
   }
 `;

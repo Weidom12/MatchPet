@@ -14,10 +14,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/findpet" element={<Findpet />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/findpet" element={<Findpet />} />        
         <Route path="/setAvatar" element={<SetAvatar />} />
         <Route path="/" element={<Chat />} />
         <Route path="/mapa" element={<Mapa />} />
