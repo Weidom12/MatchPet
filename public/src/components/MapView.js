@@ -34,7 +34,7 @@ const MapView = (props) => {
         },
         currentLocation,
       });
-      navigate("map", { state: {} })
+      //navigate("map", { state: {} })
     }
   }, [location]);
 
