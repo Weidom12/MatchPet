@@ -1,0 +1,9 @@
+{
+  "peerDependencies": {
+    "react-spring": "^8.x"
+  },
+  "dependencies": {
+    "nuka-carousel": "^5.4.0",
+    "react-with-gesture": "^4.0.8"
+  }
+}
