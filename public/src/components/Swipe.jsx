@@ -125,4 +125,4 @@ export default function Swipe() {
   );
 };
 const Container = styled.div`
-background-color:grey`;
+`;

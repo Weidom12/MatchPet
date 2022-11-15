@@ -74,7 +74,7 @@ export default function ChatContainer({ currentChat, socket }) {
         <div className="user-details">
           <div className="avatar">
             <img
-              src={`data:image/svg+xml;base64,${currentChat.avatarImage}`}
+              src={`${currentChat.avatarImage}`}
               alt=""
             />
           </div>
@@ -115,6 +115,7 @@ const Container = styled.div`
     grid-template-rows: 15% 70% 15%;
   }
   .chat-header {
+    border: 1px solid black;
     background-color:#168DB6;
     display: flex;
     justify-content: space-between;
@@ -126,6 +127,8 @@ const Container = styled.div`
       gap: 1rem;
       .avatar {
         img {
+          border-radius:3rem;
+          width:3rem;
           height: 3rem;
         }
       }

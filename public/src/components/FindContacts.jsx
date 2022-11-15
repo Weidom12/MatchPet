@@ -35,22 +35,22 @@ export default function FindContacts({ contacts, changeChat }) {
                   }`}
                   onClick={() => changeCurrentChat(index, contact)}
                 >
-                    
+                  
                     <div className="avatar">
                         <img
-                        src={`data:image/svg+xml;base64,${contact.avatarImage}`}
+                        src={`${contact.avatarImage}`}
                         alt=""
                         />
                     </div>
                     <div className="avatar">
                         <img
-                        src={`data:image/svg+xml;base64,${contact.avatarImage}`}
+                        src={`${contact.avatarImage}`}
                         alt=""
                         />
                     </div>
                     <div className="avatar">
                         <img
-                        src={`data:image/svg+xml;base64,${contact.avatarImage}`}
+                        src={`${contact.avatarImage}`}
                         alt=""
                         />
                     </div>
@@ -73,8 +73,8 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px black;
+  background-color:#168DB6;
+  border:1px solid black;
   
   .brand {
     display: flex;
@@ -116,10 +116,10 @@ const Container = styled.div`
       align-items: center;
       transition: 0.5s ease-in-out;
       .avatar {
-        img {
-          height: 3rem;
+        img {          
+          border-radius:5rem;
+          height: 5rem;
           width: 5rem;
-
         }
       }
     }

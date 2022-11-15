@@ -7,6 +7,7 @@ export default function Contacts({ contacts, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
   const [currentUserImage, setCurrentUserImage] = useState(undefined);
   const [currentSelected, setCurrentSelected] = useState(undefined);
+  
   useEffect(async () => {
     const data = await JSON.parse(
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
@@ -38,7 +39,7 @@ export default function Contacts({ contacts, changeChat }) {
                 >
                   <div className="avatar">
                     <img
-                      src={`data:image/svg+xml;base64,${contact.avatarImage}`}
+                      src={`${contact.avatarImage}`}
                       alt=""
                     />
                   </div>
@@ -52,7 +53,7 @@ export default function Contacts({ contacts, changeChat }) {
           <div className="current-user">
             <div className="avatar">
               <img
-                src={`data:image/svg+xml;base64,${currentUserImage}`}
+                src={`${currentUserImage}`}
                 alt="avatar"
               />
             </div>
@@ -93,6 +94,7 @@ const Container = styled.div`
     align-items: center;
     overflow: auto;
     gap: 0.8rem;
+    
     &::-webkit-scrollbar {
       background-color:black;
       width: 0.2rem;
@@ -103,7 +105,7 @@ const Container = styled.div`
       }
     }
     .contact {
-      
+      border:1px solid black;
       min-height: 5rem;
       cursor: pointer;
       width: 90%;
@@ -115,7 +117,9 @@ const Container = styled.div`
       transition: 0.5s ease-in-out;
       .avatar {
         img {
+          border-radius:5rem;
           height: 3rem;
+          width: 3rem;
         }
       }
       .username {
@@ -137,7 +141,9 @@ const Container = styled.div`
     gap: 2rem;
     .avatar {
       img {
-        height: 4rem;
+        height: 5rem;
+        width:5rem;
+        border-radius:3rem;
         max-inline-size: 100%;
       }
     }

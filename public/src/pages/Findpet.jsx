@@ -72,17 +72,10 @@ export default function Findpet() {
         <div className="container">
           <Contacts contacts={contacts} changeChat={handleChatChange} />
           <Swipe />
-
-
         </div>
-        
-      
       </Container>
       <Footer/>
-
-
-        <html style={{'background-color':'#dee2e6'}}>
-    
+        <html style={{'background-color':'#dee2e6'}}>    
       </html>
     </>
   );
@@ -90,9 +83,6 @@ export default function Findpet() {
 }
 
 const Container = styled.div`
-background-size: cover;
-background-position: center;
-
 height: 90vh;
 width: 100vw;
 display: flex;
@@ -102,11 +92,8 @@ gap: 1rem;
 align-items: center;
 
 background-color: #008080;
-border-radius: 10px;
-box-shadow: 10px 5px 5px black;
 
   .container {
-    background-color: rgba(150, 148, 148, 0.5);
     height: 100%;
     width: 100%;
     padding: 0;
