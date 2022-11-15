@@ -88,8 +88,6 @@ const Container = styled.div`
     }
   }
   .contacts {
-    
-    border-width:0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
