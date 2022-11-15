@@ -7,7 +7,7 @@ import { allUsersRoute, host } from "../utils/APIRoutes";
 import ChatContainer from "../components/ChatContainer";
 import Contacts from "../components/Contacts";
 import Welcome from "../components/Welcome";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavbarLog";
 import Footer from "../components/Footer";
 
 export default function Chat() {

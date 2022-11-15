@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import BurguerButton from './BurgerButton'
+
+import Perfil from '../assets/perfil.png'
 import Logout from './Logout'
 function Navbar(){
 
@@ -17,12 +19,11 @@ function Navbar(){
             <h2><span>Matchpet</span></h2>
             <div className={`links ${clicked ? 'active' : ''}`}>
 
-                <a href='/home'>Home</a>
+                <a href='/'>Mi chat</a>
                 <a href='/findpet'>Buscar Mascota</a>
                 <a href='/mapa'>Mapa</a>
-                <button >
-                    <Logout/>
-                </button>
+                <a href='/'><img src={Perfil} alt="" style={{ width: "30px", height: "30px" }} /></a>
+                <Logout/>
                 
             </div>
             <div className='burguer'>

@@ -73,7 +73,7 @@
   font-size: 12px;
 }
 
-.Descriptions {
+.BoxDescriptions {
   background: #fff;
   text-align: left;
   padding: 12px;
@@ -82,7 +82,7 @@
   font-size: 12px;
 }
 
-.Descriptions {
+.Description{
   margin-right: 4px;
   background-color: gray;
   color: #00c4cc;

@@ -6,8 +6,7 @@ import { CgLogOut} from 'react-icons/cg';
 
 
 import styled from "styled-components";
-import axios from "axios";
-import { logoutRoute } from "../utils/APIRoutes";
+
 export default function Configurations() {
   const navigate = useNavigate();
   const handleClick = async () => {

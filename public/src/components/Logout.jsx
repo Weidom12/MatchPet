@@ -1,9 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { MdLogout } from "react-icons/bi";
-import { CgLogOut} from 'react-icons/cg';
-
-
+import LogoutIm from "../assets/logout.png";
 
 import styled from "styled-components";
 import axios from "axios";
@@ -21,9 +18,7 @@ export default function Logout() {
     }
   };
   return (
-    <Button onClick={handleClick}>
-      <CgLogOut />
-    </Button>
+    <a onClick={handleClick}><img src={LogoutIm} alt="" style={{ width: "30px", height: "30px" }} /></a>
   );
 }
 
@@ -32,11 +27,6 @@ const Button = styled.button`
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
-  background-color: #9a86f3;
   border: none;
   cursor: pointer;
-  svg {
-    font-size: 1.3rem;
-    color: #ebe7ff;
-  }
 `;

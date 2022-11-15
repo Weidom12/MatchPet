@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 
 
 import Match from "../assets/love.png"
@@ -23,42 +22,42 @@ export default function Swipe() {
       age: 25,
       rate: 40,
       image: Gato1,
-      Desciption:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
+      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
     },
     {
       name: "Mascota 2",
       age: 23,
       rate: 95,
       image: Gato2,
-      Desciption:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
+      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
     },
     {
       name: "Mascota 3",
       age: 24,
       rate: 90,
       image: Gato3,
-      Desciption:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
+      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
     },
     {
       name: "Mascota 4",
       age: 25,
       rate: 40,
       image: Perro1,
-      Desciption:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
+      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
     },
     {
       name: "Mascota 5",
       age: 24,
       rate: 90,
       image: Gato3,
-      Desciption:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
+      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
     },
     {
       name: "Mascota 6",
       age: 25,
       rate: 40,
       image: Perro1,
-      Desciption:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
+      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
     }
       
   ]);
@@ -86,7 +85,7 @@ export default function Swipe() {
     }, 1000);
   };
   return (
-    <Container style={{padding:'10vh 0vh 0vh 50vh'}}>
+    <Container style={{padding:'10vh 0vh 0vh 0vh'}}>
         <div className="card-container">
           
         {nextUser !== undefined ? (
@@ -95,6 +94,7 @@ export default function Swipe() {
             age={nextUser.age}
             rate={nextUser.rate}
             image={nextUser.image}
+            Description={nextUser.Description}
             isSwiped={false}
           />
         ) : null}
@@ -104,6 +104,7 @@ export default function Swipe() {
             age={currentUser.age}
             rate={currentUser.rate}
             image={currentUser.image}
+            Description={currentUser.Description}
             isSwiped={isSwiped}
           />
         ) : null}

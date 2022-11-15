@@ -71,7 +71,8 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
-  
+  background-color:#168DB6;
+  border:1px solid black;
 
   .brand {
     display: flex;
@@ -87,6 +88,8 @@ const Container = styled.div`
     }
   }
   .contacts {
+    
+    border-width:0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,6 +132,7 @@ const Container = styled.div`
   }
 
   .current-user {
+    background-color:#168DB6;
     display: flex;
     justify-content: center;
     align-items: center;

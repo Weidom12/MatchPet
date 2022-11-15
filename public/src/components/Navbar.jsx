@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import BurguerButton from './BurgerButton'
-import Logout from './Logout'
+
 function Navbar(){
 
     const [clicked, setClicked] = useState(false)
@@ -14,17 +14,12 @@ function Navbar(){
         <>
         <NavContainer>
 
-            <h2><span>Matchpet</span></h2>
+            <h2><span><a href='/home'>Matchpet</a></span></h2>
             <div className={`links ${clicked ? 'active' : ''}`}>
 
                 <a href='/home'>Home</a>
-                <a href='/findpet'>Buscar Mascota</a>
-                <a href='/mapa'>Mapa</a>
                 <a href='/register'>Registrate</a>
                 <a href='/login'>Inicia Sesión</a>
-                <button >
-                    <Logout/>
-                </button>
                 
             </div>
             <div className='burguer'>
