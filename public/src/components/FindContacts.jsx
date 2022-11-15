@@ -90,6 +90,8 @@ const Container = styled.div`
     }
   }
   .contacts {
+    background-color:#168DB6;
+    border:1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;

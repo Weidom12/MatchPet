@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "635a13997afad09fde21cb8b"
+  },
+  "username": "Felix",
+  "email": "usuario1@gmail.com",
+  "password": "$2b$10$HitNKQKj4bIpyuc8xR4LJu03jwdSwFiaJTVQPFw2PyZNg1QcrgB5G",
+  "isAvatarImageSet": true,
+  "avatarImage": "https://w0.peakpx.com/wallpaper/755/765/HD-wallpaper-dog-pet-profile-glance-grass.jpg"
+},{
+  "_id": {
+    "$oid": "635a13c07afad09fde21cb91"
+  },
+  "username": "Fluffy",
+  "email": "usuario2@gmail.com",
+  "password": "$2b$10$wydr040BTl2H2akiT5JTwe3OP4VtmSm66VLxswb.WT7MLjj5kd606",
+  "isAvatarImageSet": true,
+  "avatarImage": "https://w0.peakpx.com/wallpaper/539/586/HD-wallpaper-cat-animals-cute-full-kitty.jpg"
+},{
+  "_id": {
+    "$oid": "635a13f57afad09fde21cb9c"
+  },
+  "username": "Lucky",
+  "email": "usuario3@gmail.com",
+  "password": "$2b$10$SqXYvSSoSytZQydPJJUQyeE5XJCYeurBFAGBpWj53Z2UEmCXKISJO",
+  "isAvatarImageSet": true,
+  "avatarImage": "https://w0.peakpx.com/wallpaper/594/461/HD-wallpaper-dog-profile-pet.jpg"
+},{
+  "_id": {
+    "$oid": "635aafd570d179a64f5ddd5e"
+  },
+  "username": "Lady",
+  "email": "ruben.diaz2017@alu.uct.cl",
+  "password": "$2b$10$LQth8x5PN6ggXBseJTjXLebYGOKt0ZuRJ77Fjf14vnBzPHVJfqW5C",
+  "isAvatarImageSet": true,
+  "avatarImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/220px-Cat_November_2010-1a.jpg"
+},{
+  "_id": {
+    "$oid": "6373fb12daae2d66ed4d5fab"
+  },
+  "username": "Tommy",
+  "email": "aa@gmail.com",
+  "password": "$2b$10$NB4sAxOZfRPmwLU.ldgdxuxNmNQyygFrbji.wYczyhrpoj/uJ82m2",
+  "isAvatarImageSet": true,
+  "avatarImage": "https://w0.peakpx.com/wallpaper/579/194/HD-wallpaper-cat-pet-profile-orange.jpg"
+}]

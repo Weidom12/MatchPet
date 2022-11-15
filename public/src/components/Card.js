@@ -4,11 +4,13 @@ import "./styles.css";
 
 export const Card = props => {
   return (
+    
     <div
       className={`card ${props.isSwiped ? "card-swiped" : ""}`}
       style={{
-        backgroundImage: `url(${props.image})`
-      }}
+        backgroundImage: `url(${props.avatarImage})`
+        
+      }}      
     >  
         <div className="info">
           <div className="name">
@@ -20,7 +22,7 @@ export const Card = props => {
                 />
               </svg>
             </span>
-            <span>{props.name}</span>
+            <span>{props.username}</span>
             <span className="age">{props.age}12</span>
             <span className="prefecture">{props.prefecture}</span>
             <span className="percent">
@@ -38,7 +40,7 @@ export const Card = props => {
               <span>{props.rate}%</span>
             </span>
             <div className="BoxDescription">
-              <span className="dDescription">{props.Description}</span>
+              <span className="dDescription">{props.email}</span>
             </div>
           </div>
         </div>

@@ -13,66 +13,18 @@ import Gato2 from "../assets/Gato_2.jpg"
 import Gato3 from "../assets/Gato_3.jpg"
 
 import Perro1 from "../assets/Perro_1.jpg"
+
+import data from "../assets/users.json"
 export default function Swipe() {
 
+  
   const [isSwiped, setIsSwiped] = useState(false);
-  const [userList, setUserList] = useState([
-    {
-      name: "Felix",
-      age: 25,
-      rate: 40,
-      image: Gato1,
-      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
-    },
-    {
-      name: "Mascota 2",
-      age: 23,
-      rate: 95,
-      image: Gato2,
-      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
-    },
-    {
-      name: "Mascota 3",
-      age: 24,
-      rate: 90,
-      image: Gato3,
-      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
-    },
-    {
-      name: "Mascota 4",
-      age: 25,
-      rate: 40,
-      image: Perro1,
-      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
-    },
-    {
-      name: "Mascota 5",
-      age: 24,
-      rate: 90,
-      image: Gato3,
-      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
-    },
-    {
-      name: "Mascota 6",
-      age: 25,
-      rate: 40,
-      image: Perro1,
-      Description:"Un excelente compañero para los viajes, el ama salir a pasear con su humano."
-    }
-      
-  ]);
+  const [userList, setUserList] = useState(data);
   const [currentUser, setCurrentUser] = useState(userList[0]);
   const [nextUser, setNextUser] = useState(userList[1]);
-  
-  
+
   const handleOnClickMatch = () => {
-    setIsSwiped(true);
-    setTimeout(() => {
-      setIsSwiped(false);
-      setCurrentUser(nextUser);
-      setNextUser(userList[2]);
-      setUserList(userList.slice(1));
-    }, 1000);
+    
   };
   
   const handleOnClickNext = () => {
@@ -90,20 +42,20 @@ export default function Swipe() {
           
         {nextUser !== undefined ? (
           <Card
-            name={nextUser.name}
+            username={nextUser.username}
             age={nextUser.age}
             rate={nextUser.rate}
-            image={nextUser.image}
+            avatarImage={nextUser.avatarImage}
             Description={nextUser.Description}
             isSwiped={false}
           />
         ) : null}
         {currentUser !== undefined ? (
           <Card
-            name={currentUser.name}
+            username={currentUser.username}
             age={currentUser.age}
-            rate={currentUser.rate}
-            image={currentUser.image}
+            email={currentUser.email}
+            avatarImage={currentUser.avatarImage}
             Description={currentUser.Description}
             isSwiped={isSwiped}
           />
