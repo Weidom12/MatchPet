@@ -37,6 +37,9 @@ export const Card = props => {
               </span>
               <span>{props.rate}%</span>
             </span>
+            <div className="Descriptions">
+              <span className="Description">{props.Description}</span>
+            </div>
           </div>
         </div>
     
