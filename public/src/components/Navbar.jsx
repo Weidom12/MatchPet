@@ -18,7 +18,9 @@ function Navbar(){
             <div className={`links ${clicked ? 'active' : ''}`}>
 
                 <a href='/home'>Home</a>
-                
+                <a href='/findpet'>Buscar Mascota</a>
+                <a href='/mapa'>Mapa</a>
+                <a href='/register'>Registrate</a>
                 <a href='/login'>Inicia Sesión</a>
                 <button >
                     <Logout/>

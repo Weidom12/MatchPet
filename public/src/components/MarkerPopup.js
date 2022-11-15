@@ -8,9 +8,9 @@ const MarkerPopup = (props) => {
   
   return (
     <Popup>
-      <div>{name}</div>
-     {description}
-      <img src={imagen} border="1" alt="" width="200" height="150"/>
+      <div><h1>{name}</h1></div>
+     <p>{description}</p>
+      <img src={imagen} border="1" alt="" width="300" height="250"/>
     </Popup>
   );
 };

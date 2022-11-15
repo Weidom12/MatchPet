@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
     <Navbar/>
-    <Container >
+    <Container>
         <div className="App">
         <header className="App-header">
             <h1 className="title">Bienvenido a MatchPet</h1>    
@@ -26,15 +26,14 @@ export default function Home() {
   }
   
 const Container = styled.div`
-
 .App-header {
-
+    background-image: linear-gradient(to left,pink,orange);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: Black;
+    color: white;
   }
 `;

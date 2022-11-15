@@ -81,7 +81,7 @@ background-position: center;
   gap: 1rem;
   align-items: center;
 
-  background-color: #008080;  
+  background-color: #008080;
   .container {
     height: 100%;
     width: 100%;

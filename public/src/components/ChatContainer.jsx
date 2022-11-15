@@ -136,9 +136,16 @@ const Container = styled.div`
     }
   }
   .chat-messages {
-    background
+
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("https://previews.123rf.com/images/telmanbagirov/telmanbagirov1803/telmanbagirov180300006/96954735-patr%C3%B3n-de-iconos-de-vida-sosial-transparente-gris-sobre-fondo-blanco.jpg
+    ");
     background-size: cover;
     background-position: center;
+    
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;

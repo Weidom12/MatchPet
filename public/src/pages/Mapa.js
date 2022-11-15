@@ -158,13 +158,14 @@ const handleInputCorreo3 = (e) => {
       
       
       <Link
-        to={{
-          pathname: "/map",
+        to={
+          "/map"
           // state: {
           //   hello: 'world'
           // }
-          state,
-        }}
+          
+        }
+		state={state}
       >
          mostrar mi ubicacion
       </Link>

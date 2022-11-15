@@ -100,7 +100,11 @@ export default function Login() {
 }
 
 const FormContainer = styled.div`
-
+  background: linear-gradient(
+  rgba(255, 255, 255, 0.7),
+  rgba(255, 255, 255, 0.3)
+  ),
+  url("https://www.vfcabogados.cl/wp-content/uploads/2018/10/tenencia-responsable-mascotas-Informativo.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -110,6 +114,7 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
+  background-color: #131324;
   .brand {
     display: flex;
     align-items: center;

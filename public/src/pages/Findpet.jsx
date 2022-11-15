@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from "../components/NavbarLog";
+import Navbar from "../components/Navbar";
 
 
 
