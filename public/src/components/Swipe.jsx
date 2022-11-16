@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 
-import Match from "../assets/love.png"
-import Arrow from "../assets/arrow_der.png"
+import Match from "../assets/love.png";
+import Arrow from "../assets/arrow_der.png";
 import { Card } from "./Card";
 import styled from "styled-components";
 
@@ -17,7 +17,7 @@ export default function Swipe() {
   const [nextUser, setNextUser] = useState(userList[1]);
 
   const handleOnClickMatch = () => {
-    alert("hiciste Match")
+    alert("hiciste Match");
     
   };
   

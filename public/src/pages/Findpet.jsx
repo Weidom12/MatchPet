@@ -13,7 +13,7 @@ import Navbar from "../components/NavbarLog";
 
 
 
-
+import ChatContainer from "../components/ChatContainer";
 import Swipe from "../components/Swipe";
 ///////////////////////////////////////////////////
 export default function Findpet() {
@@ -71,7 +71,12 @@ export default function Findpet() {
       <Container>
         <div className="container">
           <Contacts contacts={contacts} changeChat={handleChatChange} />
-          <Swipe />
+          {currentChat === undefined ? (
+            <Swipe />
+          ) : (
+            <ChatContainer currentChat={currentChat} socket={socket} />
+          )}
+          
         </div>
       </Container>
       <Footer/>
