@@ -6,13 +6,6 @@ import Arrow from "../assets/arrow_der.png"
 import { Card } from "./Card";
 import styled from "styled-components";
 
-import "./styles.css";
-
-import Gato1 from "../assets/Gato_1.jpg"
-import Gato2 from "../assets/Gato_2.jpg"
-import Gato3 from "../assets/Gato_3.jpg"
-
-import Perro1 from "../assets/Perro_1.jpg"
 
 import data from "../assets/users.json"
 export default function Swipe() {
@@ -24,6 +17,7 @@ export default function Swipe() {
   const [nextUser, setNextUser] = useState(userList[1]);
 
   const handleOnClickMatch = () => {
+    alert("hiciste Match")
     
   };
   
@@ -54,6 +48,7 @@ export default function Swipe() {
           <Card
             username={currentUser.username}
             age={currentUser.age}
+            rate={currentUser.rate}
             email={currentUser.email}
             avatarImage={currentUser.avatarImage}
             Description={currentUser.Description}
@@ -77,4 +72,51 @@ export default function Swipe() {
   );
 };
 const Container = styled.div`
+.card-container {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  margin: auto;
+}
+
+.card {
+  margin: auto;
+  width: 300px;
+  height: 500px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04), 0 12px 20px 0 rgba(0, 0, 0, 0.12);
+  position: absolute;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.buttons {
+  margin-top: 56px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-next,
+.button-match {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0px;
+  appearance: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04), 0 12px 20px 0 rgba(0, 0, 0, 0.12);
+}
+
+.button-next {
+  margin-left: 35px;
+}
+
 `;

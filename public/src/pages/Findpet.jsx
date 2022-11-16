@@ -75,7 +75,7 @@ export default function Findpet() {
         </div>
       </Container>
       <Footer/>
-        <html style={{'background-color':'#dee2e6'}}>    
+        <html style={{'background-color':'#dee2e6'}}>
       </html>
     </>
   );
@@ -91,9 +91,11 @@ justify-content: center;
 gap: 1rem;
 align-items: center;
 
-background-color: #008080;
+
+background-color: #212F3D;
 
   .container {
+    max-width:100%;
     height: 100%;
     width: 100%;
     padding: 0;

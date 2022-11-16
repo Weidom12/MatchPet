@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Logo from "../assets/logos.webp";
 import Configurations from "./Configurations";
 
 export default function Contacts({ contacts, changeChat }) {
@@ -78,10 +77,12 @@ const Container = styled.div`
   border:1px solid black;
 
   .brand {
+    background-image: linear-gradient(to right bottom, #ff0021, #ff0050, #eb0083, #b400b9, #080be9);
+    border:1px solid black;
     display: flex;
     align-items: center;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     img {
       height: 2rem;
     }
@@ -91,6 +92,7 @@ const Container = styled.div`
     }
   }
   .contacts {
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,7 +109,7 @@ const Container = styled.div`
       }
     }
     .contact {
-      border:1px solid black;
+      background-color:white;
       min-height: 5rem;
       cursor: pointer;
       width: 90%;
@@ -131,7 +133,7 @@ const Container = styled.div`
       }
     }
     .selected {
-      background-color: #9a86f3;
+      background-color: #45B39D;
     }
   }
 
