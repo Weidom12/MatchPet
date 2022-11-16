@@ -17,7 +17,7 @@ export default function Swipe() {
   const [nextUser, setNextUser] = useState(userList[1]);
 
   const handleOnClickMatch = () => {
-    alert("hiciste Match");
+    alert("hiciste Match")
     
   };
   

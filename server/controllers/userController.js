@@ -57,6 +57,7 @@ module.exports.findpet = ()=>{
 module.exports.home = ()=>{
   
 }
+module.exports.perfil=()=>{}
 module.exports.setAvatar = async (req, res, next) => {
   try {
     const userId = req.params.id;

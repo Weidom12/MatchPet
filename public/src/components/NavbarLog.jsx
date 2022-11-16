@@ -22,7 +22,7 @@ function Navbar(){
                 <a href='/'>Mi chat</a>
                 <a href='/findpet'>Buscar Mascota</a>
                 <a href='/mapa'>Mapa</a>
-                <a href='/'><img src={Perfil} alt="" style={{ width: "30px", height: "30px" }} /></a>
+                <a href='/perfil'><img src={Perfil} alt="" style={{ width: "30px", height: "30px" }} /></a>
                 <Logout/>
                 
             </div>

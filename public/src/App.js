@@ -8,6 +8,7 @@ import Mapa from "./pages/Mapa";
 import Register from "./pages/Register";
 import Findpet from "./pages/Findpet";
 import Home from "./pages/Home"
+import Perfil from "./components/vasco/Perfil"
 import "./App.css";
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/" element={<Chat />} />
         <Route path="/mapa" element={<Mapa />} />
         <Route path="/map" element={<MapView />} />
+        <Route path= "/perfil" element = {<Perfil/>}/>
       </Routes>
     </BrowserRouter>
   );

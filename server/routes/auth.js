@@ -6,6 +6,7 @@ const {
   getAllUsers,
   setAvatar,
   logOut,
+  perfil
 } = require("../controllers/userController");
 
 const router = require("express").Router();
@@ -17,5 +18,6 @@ router.post("/home", home);
 router.get("/allusers/:id", getAllUsers);
 router.post("/setavatar/:id", setAvatar);
 router.get("/logout/:id", logOut);
+router.get("/perfil",perfil)
 
 module.exports = router;
