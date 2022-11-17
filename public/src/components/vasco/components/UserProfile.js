@@ -45,10 +45,10 @@ export default function EditableUserProfile({
 
     return <div>
           <div className="brand">
-            <img src={Logo} alt="logo" />
-            <h1>Matchpet</h1>
-            </div>
+            <img src={userAvatarImage} alt="logo"  style={{"border-radius":"8rem","height": "10rem","width": "10rem"}}/>
             <h1>Mis Datos</h1>
+            </div>
+            
         <Group>
             <h2>Nombre de usuario: <h3>{userName}</h3></h2>       
         </Group>

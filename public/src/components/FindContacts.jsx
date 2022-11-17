@@ -33,6 +33,12 @@ export default function FindContacts({ contacts, changeChat }) {
             </div>
           </div>
 
+          
+          <div className="brand">
+            <a href="/">Chats</a>
+            <a >Matches</a>
+          </div>
+
           <div className="contacts">
             {contacts.map((contact, index) => {
               return (
@@ -74,10 +80,6 @@ export default function FindContacts({ contacts, changeChat }) {
               );
             })}
           </div>
-          <div className="brand">
-            <img src={Logo} alt="logo" width={50} height={50}/>
-            <h3>Matchpet</h3>
-          </div>
           
           
         </Container>
@@ -87,23 +89,27 @@ export default function FindContacts({ contacts, changeChat }) {
 }
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 10% 75% 15%;
+  grid-template-rows: 10% 5% 85%;
   overflow: hidden;
   background-color:#168DB6;
   border:1px solid black;
 
   
   .brand {
+    
     display: flex;
     align-items: center;
     gap: 1rem;
     justify-content: center;
-    img {
-      height: 2rem;
-    }
-    h3 {
-      color: White;
-      text-transform: uppercase;
+    a {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 5px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
     }
   }
   .contacts {
@@ -117,6 +123,7 @@ const Container = styled.div`
     &::-webkit-scrollbar {
       background-color:black;
       width: 0.2rem;
+
       &-thumb {
         
         width: 0.1rem;
@@ -134,6 +141,7 @@ const Container = styled.div`
       gap: 1rem;
       align-items: center;
       transition: 0.5s ease-in-out;
+      
       .avatar {
         position: relative;
         display: inline-block;
