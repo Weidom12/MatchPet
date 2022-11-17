@@ -70,9 +70,6 @@ export default function Chat() {
 }
 
 const Container = styled.div`
-background-size: cover;
-background-position: center;
-
   height: 90vh;
   width: 100vw;
   display: flex;
@@ -80,14 +77,13 @@ background-position: center;
   justify-content: center;
   gap: 1rem;
   align-items: center;
-
-background-color: #212F3D;
+  
   .container {
     max-width:100%;
     height: 100%;
     width: 100%;
     padding: 0;
-    background-color: rgba(150, 148, 148, 0.5);
+    background-color: #212F3D;
     display: grid;
     grid-template-columns: 25% 75%;
     @media screen and (min-width: 720px) and (max-width: 1080px) {
