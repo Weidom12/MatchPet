@@ -8,6 +8,7 @@ import styled from "styled-components";
 
 
 import data from "../assets/users.json"
+
 export default function Swipe() {
 
   

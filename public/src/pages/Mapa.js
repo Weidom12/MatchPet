@@ -23,7 +23,7 @@ const Mapa = () => {
 	  // Comprobamos validacion del formulario ...
 	  // Si todo es correcto enviamos el formulario
 
-	  console.log('Formulario Enviado!');
+	  alert('Formulario Enviado!');
   }
 
   // Funcion que se encarga de cambiar el estado del inputNombre
@@ -152,7 +152,7 @@ const handleInputCorreo3 = (e) => {
 
 
 
-				<button type="submit">Enviar</button>
+				<button type="submit" >Enviar</button>
 			   
 				<div>
       
