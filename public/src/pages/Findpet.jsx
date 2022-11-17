@@ -105,7 +105,7 @@ background-color: #212F3D;
     width: 100%;
     padding: 0;
     display: grid;
-    grid-template-columns: 25% 90%;
+    grid-template-columns: 25% 74%;
     @media screen and (min-width: 720px) and (max-width: 1080px) {
       grid-template-columns: 35% 65%;
     }

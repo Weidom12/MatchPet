@@ -14,9 +14,9 @@ function Navbar(){
     }
     return(
         <>
-        <NavContainer>
+        <NavContainer id="hola">
 
-            <h2><span>Matchpet</span></h2>
+            <h1><a href='/home'>Matchpet</a></h1>
             <div className={`links ${clicked ? 'active' : ''}`}>
 
                 <a href='/'>Mi chat</a>
@@ -24,6 +24,7 @@ function Navbar(){
                 <a href='/mapa'>Mapa</a>
                 <a href='/perfil'><img src={Perfil} alt="" style={{ width: "30px", height: "30px" }} /></a>
                 <Logout/>
+                
                 
             </div>
             <div className='burguer'>
@@ -39,15 +40,17 @@ function Navbar(){
 export default Navbar
 
 const NavContainer = styled.nav`
+
+height: 2rem;
+
 h2{
-    color: white;
+    color: black;
     font-weight: 400, bold;
     span{
         font-weight:bold;
     }
 }
 padding: .4rem;
-background-color: #E78400;
 display: flex;
 align-items: center;
 justify-content: space-between;
@@ -100,4 +103,4 @@ a{
         display: none;
     }
 }
-`
+`;
